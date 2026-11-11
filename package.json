@@ -1,0 +1,35 @@
+{
+  "name": "cat-capitalist",
+  "private": true,
+  "version": "2.1.5",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tauri dev",
+    "dev:web": "vite",
+    "build": "tsc -b && vite build",
+    "build:tauri": "pnpm update:tauri-version && tauri build",
+    "tauri": "tauri",
+    "generate:previews": "node ./preview/scripts/generate-previews.js",
+    "generate:video": "node ./preview/scripts/generate-video.js",
+    "check:versions": "node ./scripts/check-versions.js",
+    "update:app-version": "node ./scripts/update-app-version.js",
+    "update:tauri-version": "node ./scripts/update-tauri-version.js",
+    "version:bump": "pnpm version patch --no-git-tag-version && pnpm update:tauri-version && git add package.json pnpm-lock.yaml src-tauri/tauri.conf.json src-tauri/Cargo.toml src-tauri/Cargo.lock"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "phaser": "^4.2.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.16"
+  }
+}

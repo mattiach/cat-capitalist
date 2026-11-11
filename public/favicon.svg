@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a2c68"/>
+      <stop offset="1" stop-color="#21152f"/>
+    </linearGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffbd6e"/>
+      <stop offset="1" stop-color="#f08f3c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe28a"/>
+      <stop offset="1" stop-color="#e9a020"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- Ears -->
+  <path d="M84 300 74 136 226 204z" fill="url(#fur)" stroke="url(#fur)" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M428 300 438 136 286 204z" fill="url(#fur)" stroke="url(#fur)" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M112 244 106 172 178 206z" fill="#ff8fb4" stroke="#ff8fb4" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M400 244 406 172 334 206z" fill="#ff8fb4" stroke="#ff8fb4" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- Head -->
+  <ellipse cx="256" cy="324" rx="184" ry="150" fill="url(#fur)"/>
+  <path d="M90 336h44M110 384h36M422 336h-44M402 384h-36" stroke="#c96a22" stroke-width="16" stroke-linecap="round"/>
+  <ellipse cx="256" cy="402" rx="74" ry="50" fill="#ffe6c8"/>
+
+  <!-- Eyes: the right one sits behind the monocle -->
+  <ellipse cx="172" cy="318" rx="38" ry="42" fill="#21152f"/>
+  <ellipse cx="172" cy="318" rx="28" ry="32" fill="#a5dc3c"/>
+  <ellipse cx="172" cy="318" rx="10" ry="28" fill="#21152f"/>
+  <circle cx="184" cy="302" r="8" fill="#fff"/>
+  <circle cx="340" cy="318" r="62" fill="#fff7d6"/>
+  <ellipse cx="340" cy="318" rx="38" ry="42" fill="#21152f"/>
+  <ellipse cx="340" cy="318" rx="28" ry="32" fill="#a5dc3c"/>
+  <ellipse cx="340" cy="318" rx="10" ry="28" fill="#21152f"/>
+  <circle cx="352" cy="302" r="8" fill="#fff"/>
+  <circle cx="340" cy="318" r="62" fill="none" stroke="url(#gold)" stroke-width="18"/>
+  <path d="M392 366c24 30 24 62 6 92" fill="none" stroke="#ffcf5a" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Nose and smirk -->
+  <path d="M236 372h40l-20 24z" fill="#ff6f9c" stroke="#ff6f9c" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M212 412c16 20 34 16 44-6 10 22 28 26 44 6" fill="none" stroke="#21152f" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- Top hat -->
+  <g transform="rotate(-6 256 190)">
+    <path d="M168 44q0-14 14-14h148q14 0 14 14v142H168z" fill="#21152f" stroke="#120b1b" stroke-width="6"/>
+    <rect x="168" y="136" width="176" height="42" fill="url(#gold)"/>
+    <rect x="112" y="176" width="288" height="34" rx="17" fill="#21152f" stroke="#120b1b" stroke-width="6"/>
+    <path d="M190 52v68" stroke="#5c4478" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

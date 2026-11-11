@@ -1,0 +1,11 @@
+node_modules
+dist
+out
+
+# Copied from the game by scripts/copy-assets.mjs before dev and render.
+public/screenshots
+public/audio
+public/logo.svg
+
+# The rendered films; regenerate them with `pnpm render`.
+cat-capitalist.mp4
