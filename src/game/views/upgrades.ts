@@ -44,12 +44,11 @@ export function upgradesView(game: GameScene) {
   return section === 'forever' ? permanentUpgradesList(game, countLabel) : runUpgradesList(game, countLabel);
 }
 
-/** Every run upgrade not bought yet, cheapest first. One bought now stays listed until the tab is reopened. */
+/** Every run upgrade, cheapest first. Bought ones stay listed as Purchased until the next ascension resets them. */
 function runUpgradesList(game: GameScene, countLabel: Phaser.GameObjects.Text) {
-  const { s, ui } = game;
+  const { ui } = game;
   countLabel.setColor(hex(C.pink));
-  const list = UPGRADES.map((u, k) => ({ ...u, k })).filter((u) => !s.upgrades[u.k]).sort((a, b) => a.cost - b.cost);
-  if (!list.length) ui.iconText(CX + 524, 400, 'celebrate', 18, 'Every upgrade purchased!', 30, '#ffffff', true);
+  const list = UPGRADES.map((u, k) => ({ ...u, k })).sort((a, b) => a.cost - b.cost);
   const pageCount = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
   // Open on the first page holding something new, so it can't be missed.
   let page = pageOf(Math.max(0, list.findIndex((u) => game.isNew(u.k))));
