@@ -1,6 +1,6 @@
 [package]
 name = "cat-capitalist"
-version = "2.1.5"
+version = "2.1.6"
 description = "A Tauri App"
 authors = ["you"]
 edition = "2024"
